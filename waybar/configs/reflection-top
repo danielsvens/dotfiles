@@ -1,8 +1,8 @@
 {
     "include": [
-        "$HOME/.config/waybar/modules/modules-catppuccin.jsonc",
+        "$HOME/.config/waybar/modules/modules-main.jsonc",
+        "$HOME/.config/waybar/modules/modules-groups.jsonc",
         "$HOME/.config/waybar/modules/modules-custom.jsonc",
-        "$HOME/.config/waybar/modules/modules-groups.jsonc"
     ],
     "layer": "top",
     "position": "top",
@@ -13,34 +13,41 @@
     "reload_style_on_change": true,
     "height": 20,
     "margin-top": 5,
-    "margin-left": 10,
-    "margin-right": 10,
+    "margin-left": 5,
+    "margin-right": 5,
 
     "modules-left": [
         "custom/launch_rofi",
-        "hyprland/window", 
-        "hyprland/workspaces",
-        "group/sysinfo",
-        "mpris" 
+        "tray",
+        "group/sysinfo" 
     ],
 
     "modules-center": [
-        "clock"
-    ],
-
-    "modules-right": [ 
-        "tray", 
-        "pulseaudio", 
-        "pulseaudio#microphone", 
-        //"custom/updater", 
+        "backlight",  
         "idle_inhibitor", 
         "custom/nightlight", 
         "custom/clipboard", 
-        //"battery", 
-        "backlight",  
-        "group/network", 
-        "group/power"
+        "hyprland/workspaces", 
+        "pulseaudio", 
+        "pulseaudio#microphone", 
+        "battery", 
     ],
+
+    "modules-right": [
+        "group/network", 
+        "custom/updater", 
+        "clock",
+        "custom/power_btn"
+    ],
+
+
+    "custom/launch_rofi": {
+        "format": "",
+        "on-click": "rofi -show drun -theme ~/.config/rofi/menu/menu.rasi",
+        "on-click-right": "kitty --title yazi -e yazi",
+        "tooltip": true,
+        "tooltip-format": "Left Click: Launch Rofi\nRight Click: Launch yazi"
+    },
 
     "hyprland/workspaces": {
         "disable-scroll": true,
@@ -50,7 +57,8 @@
         "on-scroll-down": "hyprctl dispatch workspace e+1",
         "format": "{icon}",
         "format-icons": {
-            "default": ""
+            "active": "󰮯",
+            "default": ""
           },
         "persistent-workspaces": {
             "1": [],

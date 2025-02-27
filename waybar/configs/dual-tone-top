@@ -1,6 +1,6 @@
 {
     "include": [
-        "$HOME/.config/waybar/modules/modules-catppuccin.jsonc",
+        "$HOME/.config/waybar/modules/modules-dual-tone.jsonc",
         "$HOME/.config/waybar/modules/modules-custom.jsonc",
         "$HOME/.config/waybar/modules/modules-groups.jsonc"
     ],
@@ -19,26 +19,30 @@
     "modules-left": [
         "custom/launch_rofi",
         "hyprland/window", 
-        "hyprland/workspaces",
-        "group/sysinfo",
+        "idle_inhibitor", 
+        "custom/nightlight",
+        "custom/clipboard_icon" ,
+        "custom/clipboard", 
+        "group/system",
         "mpris" 
     ],
 
     "modules-center": [
-        "clock"
+        "hyprland/workspaces"
     ],
 
     "modules-right": [ 
         "tray", 
+        "custom/pulseaudio_icon",
         "pulseaudio", 
-        "pulseaudio#microphone", 
-        //"custom/updater", 
-        "idle_inhibitor", 
-        "custom/nightlight", 
-        "custom/clipboard", 
-        //"battery", 
+        "custom/pulse_mic_icon",
+        "pulseaudio#microphone",
+        "custom/updater_icon", 
+        "custom/updater", 
+        "battery", 
         "backlight",  
         "group/network", 
+        "clock",
         "group/power"
     ],
 

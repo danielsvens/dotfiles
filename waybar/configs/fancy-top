@@ -1,8 +1,8 @@
 {
     "include": [
-        "$HOME/.config/waybar/modules/modules-catppuccin.jsonc",
+        "$HOME/.config/waybar/modules/modules-main.jsonc",
+        "$HOME/.config/waybar/modules/modules-groups.jsonc",
         "$HOME/.config/waybar/modules/modules-custom.jsonc",
-        "$HOME/.config/waybar/modules/modules-groups.jsonc"
     ],
     "layer": "top",
     "position": "top",
@@ -12,34 +12,31 @@
     "gtk-layer-shell": true,
     "reload_style_on_change": true,
     "height": 20,
-    "margin-top": 5,
-    "margin-left": 10,
-    "margin-right": 10,
+    "margin-top": 0,
 
     "modules-left": [
-        "custom/launch_rofi",
-        "hyprland/window", 
-        "hyprland/workspaces",
+        "custom/launch_rofi", 
         "group/sysinfo",
-        "mpris" 
+        "custom/weather",
+        "mpris"
     ],
 
     "modules-center": [
-        "clock"
+        "hyprland/workspaces"
     ],
 
-    "modules-right": [ 
+    "modules-right": [
         "tray", 
+        "custom/updater", 
         "pulseaudio", 
         "pulseaudio#microphone", 
-        //"custom/updater", 
+        "battery", 
+        "backlight", 
         "idle_inhibitor", 
         "custom/nightlight", 
         "custom/clipboard", 
-        //"battery", 
-        "backlight",  
         "group/network", 
-        "group/power"
+        "clock"
     ],
 
     "hyprland/workspaces": {
@@ -50,12 +47,26 @@
         "on-scroll-down": "hyprctl dispatch workspace e+1",
         "format": "{icon}",
         "format-icons": {
-            "default": ""
-          },
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "5": ""
+        },
         "persistent-workspaces": {
             "1": [],
             "2": [],
-            "3": []
+            "3": [],
+            "4": [],
+            "5": []
         }
+    },
+
+    "custom/launch_rofi": {
+        "format": "Apps",
+        "on-click": "rofi -show drun -theme ~/.config/rofi/menu/menu.rasi",
+        "on-click-right": "kitty --title yazi -e yazi",
+        "tooltip": true,
+        "tooltip-format": "Left Click: Launch Rofi\nRight Click: Launch yazi"
     }
 }

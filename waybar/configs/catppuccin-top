@@ -32,11 +32,11 @@
         "tray", 
         "pulseaudio", 
         "pulseaudio#microphone", 
-        //"custom/updater", 
+        "custom/updater", 
         "idle_inhibitor", 
         "custom/nightlight", 
         "custom/clipboard", 
-        //"battery", 
+        "battery", 
         "backlight",  
         "group/network", 
         "group/power"

@@ -1,8 +1,8 @@
 {
     "include": [
-        "$HOME/.config/waybar/modules/modules-catppuccin.jsonc",
+        "$HOME/.config/waybar/modules/modules-main.jsonc",
+        "$HOME/.config/waybar/modules/modules-groups.jsonc",
         "$HOME/.config/waybar/modules/modules-custom.jsonc",
-        "$HOME/.config/waybar/modules/modules-groups.jsonc"
     ],
     "layer": "top",
     "position": "top",
@@ -13,14 +13,14 @@
     "reload_style_on_change": true,
     "height": 20,
     "margin-top": 5,
-    "margin-left": 10,
-    "margin-right": 10,
+    "margin-left": 5,
+    "margin-right": 5,
 
     "modules-left": [
-        "custom/launch_rofi",
-        "hyprland/window", 
-        "hyprland/workspaces",
-        "group/sysinfo",
+        "custom/launch_rofi", 
+        "tray", 
+        "hyprland/workspaces", 
+        "custom/weather",
         "mpris" 
     ],
 
@@ -28,18 +28,18 @@
         "clock"
     ],
 
-    "modules-right": [ 
-        "tray", 
+    "modules-right": [
+        "custom/updater", 
         "pulseaudio", 
         "pulseaudio#microphone", 
-        //"custom/updater", 
+        "group/sysinfo", 
         "idle_inhibitor", 
         "custom/nightlight", 
         "custom/clipboard", 
-        //"battery", 
+        "battery", 
         "backlight",  
         "group/network", 
-        "group/power"
+        "custom/power_btn"
     ],
 
     "hyprland/workspaces": {
@@ -50,12 +50,24 @@
         "on-scroll-down": "hyprctl dispatch workspace e+1",
         "format": "{icon}",
         "format-icons": {
-            "default": ""
+            // for arch
+            "active": "󰮯",
+            "default": ""
+
+            // for fedora
+            //  "active": "󰣛",  
+            //  "default": ""
+
+            // for opensuse
+            // "active": "",
+            // "default": ""
           },
         "persistent-workspaces": {
             "1": [],
             "2": [],
-            "3": []
+            "3": [],
+            "4": [],
+            "5": []
         }
     }
 }
