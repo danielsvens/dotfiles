@@ -79,6 +79,7 @@ tooltip label {
 #battery,
 #mpris,
 #custom-nightlight,
+#wttr,
 #backlight {
   background: @crust;
   opacity: 1;

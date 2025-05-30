@@ -21,7 +21,8 @@
         "hyprland/window", 
         "hyprland/workspaces",
         "group/sysinfo",
-        "mpris" 
+        "mpris",
+        "custom/weather",
     ],
 
     "modules-center": [
