@@ -7,7 +7,7 @@
   min-height: 0;
 }
 
-@import "style/mocha.css";
+@import "style/palette.css";
 
 window#waybar {
   background: alpha(@mantle, 0.84);

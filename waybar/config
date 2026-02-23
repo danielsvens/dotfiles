@@ -6,6 +6,9 @@
   ],
   "layer": "top",
   "position": "top",
+  "output": [
+    "DP-3"
+  ],
   "mod": "dock",
   "exclusive": true,
   "passthrough": false,
