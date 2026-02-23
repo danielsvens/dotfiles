@@ -2,9 +2,12 @@ import subprocess
 from pathlib import Path
 
 
-EXCLUDED = [".git", "scripts"]
-DIRS = [p.name for p in Path().iterdir() if p.is_dir()
-        and p.name not in EXCLUDED]
+EXCLUDED = [".git", "scripts", "__pycache__"]
+DIRS = [
+    p.name
+    for p in Path().iterdir()
+    if p.is_dir() and p.name not in EXCLUDED and not p.name.startswith(".")
+]
 COMMAND = "stow -v -R -t /home/daniel/.config/hypr hypr"
 
 

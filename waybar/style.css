@@ -35,7 +35,7 @@ tooltip label {
   font-size: 12px;
 }
 
-#custom-launch_rofi,
+#custom-launch_apps,
 #window,
 #workspaces,
 #custom-system,
@@ -60,7 +60,7 @@ tooltip label {
   color: @subtext1;
 }
 
-#custom-launch_rofi {
+#custom-launch_apps {
   color: @blue;
   padding: 0 12px;
 }

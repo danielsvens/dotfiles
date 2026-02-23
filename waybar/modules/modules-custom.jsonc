@@ -1,10 +1,9 @@
 {
-  "custom/launch_rofi": {
+  "custom/launch_apps": {
     "format": "",
-    "on-click": "rofi -show drun -theme ~/.config/rofi/menu/menu.rasi",
-    "on-click-right": "kitty --title yazi -e yazi",
+    "on-click": "fuzzel",
     "tooltip": true,
-    "tooltip-format": "Left Click: Launch Rofi\nRight Click: Launch yazi"
+    "tooltip-format": "Launch app launcher"
   },
   "custom/weather": {
     "format": "{}",

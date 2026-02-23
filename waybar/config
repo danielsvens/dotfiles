@@ -19,12 +19,12 @@
   "margin-left": 10,
   "margin-right": 10,
   "modules-left": [
-    "custom/launch_rofi",
+    "custom/launch_apps",
     "hyprland/window",
     "hyprland/workspaces",
     "group/sysinfo",
-    "mpris",
-    "custom/weather"
+    "mpris"
+    //"custom/weather"
   ],
   "modules-center": [
     "clock"
