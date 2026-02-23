@@ -9,7 +9,8 @@ case $1 in
             cliphist wipe
         fi
         ;;
-    l)  cliphist list | wc -l
+    l)  count=$(cliphist list 2>/dev/null | wc -l)
+        echo "${count:-0}"
         ;;
     *)  echo -e "cliphist.sh [action]"
         echo "c :  cliphist list and copy selected"
