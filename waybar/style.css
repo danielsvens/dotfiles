@@ -25,9 +25,9 @@ window#waybar .modules-right {
 }
 
 tooltip {
-  background: alpha(@mantle, 0.95);
-  color: @text;
-  border: 1px solid alpha(@overlay2, 0.3);
+  background: alpha(@crust, 0.94);
+  color: @rosewater;
+  border: 1px solid alpha(@blue, 0.55);
   border-radius: 8px;
 }
 
@@ -97,28 +97,28 @@ tooltip label {
 #memory,
 #disk,
 #temperature {
-  padding: 0 5px;
+  padding: 0 8px;
 }
 
 #custom-system {
-  color: @yellow;
+  color: @blue;
   padding-left: 10px;
 }
 
 #cpu {
-  color: @peach;
+  color: @sapphire;
 }
 
 #memory {
-  color: @teal;
+  color: @sapphire;
 }
 
 #disk {
-  color: @lavender;
+  color: @sapphire;
 }
 
 #temperature {
-  color: @rosewater;
+  color: @sapphire;
   padding-right: 10px;
 }
 
