@@ -6,7 +6,7 @@ IFS=$'\n\t'
 theme="${1:-}"
 
 if [[ -z "$theme" ]]; then
-    echo "Usage: $0 <olive|mocha|blue-grotto> [--reload]" >&2
+    echo "Usage: $0 <olive|mocha|blue-grotto|liquid-glass> [--reload]" >&2
     exit 1
 fi
 
@@ -31,9 +31,13 @@ case "$theme" in
         waybar_theme="blue-grotto"
         hypr_theme="blue-grotto"
         ;;
+    liquid-glass)
+        waybar_theme="liquid-glass"
+        hypr_theme="liquid-glass"
+        ;;
     *)
         echo "Unknown theme: $theme" >&2
-        echo "Supported themes: olive, mocha, blue-grotto" >&2
+        echo "Supported themes: olive, mocha, blue-grotto, liquid-glass" >&2
         exit 1
         ;;
 esac

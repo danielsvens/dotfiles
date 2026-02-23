@@ -15,3 +15,4 @@ Switch options:
 - Or use: `~/.config/hypr/scripts/palette-switch.sh olive --reload`
 - Or use: `~/.config/hypr/scripts/palette-switch.sh mocha --reload`
 - Or use: `~/.config/hypr/scripts/palette-switch.sh blue-grotto --reload`
+- Or use: `~/.config/hypr/scripts/palette-switch.sh liquid-glass --reload`
