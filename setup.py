@@ -8,7 +8,7 @@ DIRS = [
     for p in Path().iterdir()
     if p.is_dir() and p.name not in EXCLUDED and not p.name.startswith(".")
 ]
-COMMAND = "stow -v -R -t /home/daniel/.config/hypr hypr"
+COMMAND = f"stow -v -R -t {Path.home()}/.config/hypr hypr"
 
 
 def stow():
@@ -24,7 +24,7 @@ def stow():
 
 
 def build_command(arg) -> list:
-    return f"stow -v -R -t /home/daniel/.config/{arg} {arg}".split(" ")
+    return f"stow -v -R -t {Path.home()}/.config/{arg} {arg}".split(" ")
 
 
 if __name__ == "__main__":
