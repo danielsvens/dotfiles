@@ -34,7 +34,7 @@
     "format": "{}",
     "separate-outputs": true,
     "rewrite": {
-      "(.*)$daniel@$arch-lab:(.*)": "$1  :$2",
+      "(.*)\$[^@]+@[^:]+:(.*)": "$1  :$2",
       "(.*) — Mozilla Firefox": "$1 󰈹",
       "(.*)Mozilla Firefox": "$1 Firefox 󰈹",
       "(.*) - Visual Studio Code": "$1 󰨞",
