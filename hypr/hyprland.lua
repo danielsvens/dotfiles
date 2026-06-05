@@ -19,6 +19,15 @@ hl.monitor({
     scale = "auto",
 })
 
+--
+--hl.monitor({
+--  output = "headless",
+--  mode = "1920x1080@120",
+--  position = "auto",
+--  scale = "1",
+--})
+--
+
 local terminal = "kitty"
 local fileManager = "dolphin"
 local menu = "fuzzel"
@@ -149,7 +158,7 @@ hl.bind(mainMod .. " + M", hl.dsp.exit())
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
-hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
+-- hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 -- hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))
 
 hl.bind(mainMod .. " + left", hl.dsp.focus({ direction = "left" }))
@@ -215,3 +224,8 @@ hl.layer_rule({
     ignore_alpha = 0,
     match = { namespace = "^waybar$" },
 })
+
+hl.workspace_rule({ workspace = "1", monitor = "DP-3" })
+hl.workspace_rule({ workspace = "2", monitor = "DP-1" })
+hl.workspace_rule({ workspace = "3", monitor = "DP-1" })
+
