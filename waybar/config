@@ -34,6 +34,7 @@
     "pulseaudio",
     "pulseaudio#microphone",
     "custom/nightlight",
+    "custom/idle_suspend",
     "backlight",
     "group/network",
     "group/power"

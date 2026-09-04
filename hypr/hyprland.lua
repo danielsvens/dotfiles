@@ -7,7 +7,7 @@ local theme = {
 
 hl.monitor({
     output = "DP-1",
-    mode = "1929x1080@144",
+    mode = "1920x1080@144",
     position = "0x0",
     scale = "auto",
 })
@@ -36,6 +36,7 @@ local mainMod = "SUPER"
 hl.on("hyprland.start", function()
     hl.exec_cmd("waybar")
     hl.exec_cmd("hyprpaper")
+    hl.exec_cmd("hypridle -c ~/dotfiles/hypr/hypridle.conf")
 end)
 
 hl.env("XCURSOR_SIZE", "24")
@@ -228,4 +229,3 @@ hl.layer_rule({
 hl.workspace_rule({ workspace = "1", monitor = "DP-3" })
 hl.workspace_rule({ workspace = "2", monitor = "DP-1" })
 hl.workspace_rule({ workspace = "3", monitor = "DP-1" })
-

@@ -26,6 +26,15 @@
     "tooltip-format": "Screen temperature is: {}\n\nLeft Click: set temp 5000k\nRight Click: set temp 6500k (default)\n\nScroll Down: increase temp(+100K)\nScroll Up: decrease temp(-100K)",
     "interval": 1
   },
+  "custom/idle_suspend": {
+    "format": "{}",
+    "return-type": "json",
+    "exec": "~/.config/hypr/scripts/idle-suspend.sh",
+    "on-click": "~/.config/hypr/scripts/idle-suspend.sh --toggle",
+    "tooltip": true,
+    "tooltip-format": "{tooltip}",
+    "interval": 1
+  },
   "custom/system": {
     "format": "",
     "tooltip-format": "system info\n\nLeft-click to check system info"
